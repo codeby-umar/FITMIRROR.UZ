@@ -67,9 +67,7 @@ function App() {
         <Route
           path="*"
           element={
-            <Layout>
               <Notfound />
-            </Layout>
           }
         />
       </Routes>
