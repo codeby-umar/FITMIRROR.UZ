@@ -55,7 +55,7 @@ function App() {
           }
         />
         <Route
-          path="/clothes/:id"
+          path="/clothesid"
           element={
             <Layout>
               <ClothesId />

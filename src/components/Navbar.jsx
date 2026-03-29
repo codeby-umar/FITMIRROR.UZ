@@ -60,7 +60,7 @@ function Navbar() {
         </button>
       </div>
       {open && (
-        <div className="md:hidden mt-4 flex flex-col rounded-b-2xl gap-5 bg-white p-5">
+        <div className="md:hidden mt-4 flex flex-col rounded-b-2xl gap-5  p-5">
           <NavLink to="/">Bosh Sahifa</NavLink>
           <NavLink to={"/clothes"}>Kiyimlar</NavLink>
           <NavLink to={"/about"}>Qanday ishlaydi</NavLink>

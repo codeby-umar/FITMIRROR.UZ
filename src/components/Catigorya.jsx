@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Heart } from "lucide-react";
 import { useState } from "react";
 import imgs from "../assets/images/img.svg";
+import { GiBurningEye } from "react-icons/gi";
 
 function Catigorya() {
   const [liked, setLiked] = useState(false);
@@ -73,11 +74,13 @@ function Catigorya() {
                   }`}
                 />
               </button>
-              <img
-                src={imgs}
-                alt="product"
-                className="object-contain transition group-hover:scale-105 max-w-full h-auto"
-              />
+              <Link to={"/clothesid"}>
+                <img
+                  src={imgs}
+                  alt="product"
+                  className="object-contain transition group-hover:scale-105 max-w-full h-auto"
+                />
+              </Link>
             </div>
             <div className="py-3 reletive">
               <div className="flex items-center justify-between">
@@ -92,8 +95,11 @@ function Catigorya() {
                 <div className="text-yellow-400">★★★★★</div>
                 <span>(230)</span>
               </div>
-              <Link className="px-4 rounded-b-4xl flex items-center justify-center text-white w-full py-3 gap-2 text-base sm:text-lg font-bold bg-[#4E47FF]">
-                Kiyib ko'rish
+              <Link
+                to={"/chooseclothes"}
+                className="px-4 rounded-b-4xl flex items-center justify-center text-white w-full py-3 gap-2 text-base sm:text-lg font-bold bg-[#4E47FF]"
+              >
+                <GiBurningEye size={"20px"} /> Kiyib ko'rish
               </Link>
             </div>
           </div>
