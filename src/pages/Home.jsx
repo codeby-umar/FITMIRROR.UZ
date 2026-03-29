@@ -1,9 +1,77 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+import images from "../assets/images/images.svg";
+import Catigorya from "../components/Catigorya";
 
 function Home() {
+  const about = [
+    {
+      id: 1,
+      name: "Kiyimni tanlang",
+      description: "Sevimli kiyimingizni tanlang",
+    },
+    {
+      id: 2,
+      name: "Rasm yuklang",
+      description: "O’zingizni suratga oling",
+    },
+    {
+      id: 3,
+      name: "Natijani ko’ring",
+      description: "Sevimli kiyimingizni tanlang",
+    },
+  ];
+
   return (
-    <div>Home</div>
-  )
+    <div>
+      <section className="py-7 container flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+        <div className="w-full md:w-auto text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold max-w-full md:max-w-80 mb-5 leading-10 sm:leading-12 md:leading-16">
+            Kiyimni online kiyib ko'ring{" "}
+            <span className="text-indigo-500">Ai yordamida</span>
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-[#252432] max-w-full md:max-w-105 mb-10 md:mb-17">
+            O’z uslubingizni Ai yordamida kuzating va zamonaviy kiyimlarni
+            virtual tarzda kiyib koring
+          </p>
+          <div>
+            <Link
+              to={"/chooseclothes"}
+              className="bg-indigo-600 p-4.5 px-10 sm:px-14 md:px-17 font-bold text-base text-white rounded-[10px] inline-block"
+            >
+              Boshlash
+            </Link>
+          </div>
+        </div>
+
+        <div className="w-full md:w-auto flex justify-center">
+          <img src={images} alt="home pages logo" className="max-w-full h-auto" />
+        </div>
+      </section>
+
+      <section className="container p-5">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-10 md:mb-15 text-[#252432] font-bold text-center">
+          Qanday ishlaydi
+        </h1>
+        <div className="flex flex-col sm:flex-col md:flex-row items-center justify-between gap-5 md:gap-9">
+          {about.map((item) => (
+            <div
+              key={item.id}
+              className="h-27.5 w-full flex items-center justify-center bg-white rounded-sm"
+            >
+              <div className="text-center md:text-left">
+                <h2 className="text-lg sm:text-xl mb-2 font-semibold">{item.name}</h2>
+                <p className="text-sm text-gray-400">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="container flex items-center justify-center min-h-screen py-10">
+        <Catigorya />
+      </section>
+    </div>
+  );
 }
 
-export default Home
+export default Home;
