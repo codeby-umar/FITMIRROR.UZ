@@ -13,9 +13,16 @@ function Navbar() {
     }`;
 
   return (
-    <header className="container w-full py-4">
-      <div className="flex items-center justify-between">
-        
+    <header
+      className="
+    container w-full p-5
+    fixed top-0 left-0 z-50
+    bg-white/70 backdrop-blur-md shadow-sm
+
+    md:relative md:bg-transparent md:backdrop-blur-0 md:shadow-none md:p-5
+  "
+    >
+      <div className="flex items-center  justify-between">
         <a
           className="flex items-center text-gray-800 text-xl sm:text-2xl font-bold gap-2"
           href="/"
@@ -48,34 +55,18 @@ function Navbar() {
           </Link>
         </div>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl"
-        >
+        <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
           ☰
         </button>
       </div>
       {open && (
-        <div className="md:hidden mt-4 flex flex-col gap-5 bg-white p-5 rounded-2xl">
-          <NavLink className={NavlinkActivate} to="/">
-            Bosh Sahifa
-          </NavLink>
-          <NavLink className={NavlinkActivate} to={"/clothes"}>
-            Kiyimlar
-          </NavLink>
-          <NavLink className={NavlinkActivate} to={"/about"}>
-            Qanday ishlaydi
-          </NavLink>
-          <NavLink className={NavlinkActivate} to={"/servises"}>
-            Xizmatlar
-          </NavLink>
+        <div className="md:hidden mt-4 flex flex-col rounded-b-2xl gap-5 bg-white p-5">
+          <NavLink to="/">Bosh Sahifa</NavLink>
+          <NavLink to={"/clothes"}>Kiyimlar</NavLink>
+          <NavLink to={"/about"}>Qanday ishlaydi</NavLink>
+          <NavLink to={"/servises"}>Xizmatlar</NavLink>
 
-          <Link
-            className="bg-indigo-600 p-3 font-bold text-base text-white rounded-[10px] text-center"
-            to={"/chooseclothes"}
-          >
-            Virtual kiyib korish
-          </Link>
+          <Link to={"/chooseclothes"}>Virtual kiyib korish</Link>
         </div>
       )}
     </header>

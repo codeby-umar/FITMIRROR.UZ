@@ -32,7 +32,7 @@ function Catigorya() {
   return (
     <section className="container p-5 md:p-0">
       <div className="mb-10 md:mb-16 flex flex-col gap-5  lg:flex-row lg:items-start lg:justify-between">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#252432]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#252432]">
           Kiyim kategoriyalari
         </h2>
 
@@ -43,23 +43,23 @@ function Catigorya() {
               checked
               className="h-5 w-5 accent-blue-600"
             />
-            <span className="text-base sm:text-lg md:text-xl font-semibold text-black">
+            <span className="text-base sm:text-lg md:text-lg font-semibold text-black">
               Kiyimlar
             </span>
           </label>
 
           <label className="flex cursor-pointer items-center gap-3 bg-white px-5 py-3">
             <input type="checkbox" className="h-5 w-5 accent-blue-600" />
-            <span className="text-base sm:text-lg md:text-xl font-semibold text-black">
+            <span className="text-base sm:text-lg md:text-lg font-semibold text-black">
               Oyoq kiyimlar
             </span>
           </label>
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-6">
+      <div className="flex flex-wrap items-center justify-center gap-10">
         {Prodectes.map((item) => (
-          <div key={item.id} className="w-full sm:w-[47%] lg:w-75">
+          <div key={item.id} className="w-full sm:w-[47%] lg:w-70">
             <div className="relative w-full flex items-center justify-center rounded-t-4xl bg-[#00000040] overflow-hidden">
               <button
                 onClick={() => setLiked(!liked)}

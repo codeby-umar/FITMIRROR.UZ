@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import images from "../assets/images/images.svg";
 import Catigorya from "../components/Catigorya";
+import man from "../assets/icons/man.svg"
 
 function Home() {
   const about = [
@@ -23,9 +24,9 @@ function Home() {
 
   return (
     <div>
-      <section className="py-7 container flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+      <section className="py-0 md:p-7 container flex flex-col-reverse md:flex-row items-center justify-center">
         <div className="w-full md:w-auto text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold max-w-full md:max-w-80 mb-5 leading-10 sm:leading-12 md:leading-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold max-w-full md:max-w-150 mb-5 leading-10 sm:leading-12 md:leading-16">
             Kiyimni online kiyib ko'ring{" "}
             <span className="text-indigo-500">Ai yordamida</span>
           </h1>
@@ -44,12 +45,12 @@ function Home() {
         </div>
 
         <div className="w-full md:w-auto flex justify-center">
-          <img src={images} alt="home pages logo" className="max-w-full h-auto" />
+          <img src={man} alt="home pages logo" className="max-w-full w h-153" />
         </div>
       </section>
 
       <section className="container p-5">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-10 md:mb-15 text-[#252432] font-bold text-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-10 md:mb-15 text-[#252432] font-bold text-center">
           Qanday ishlaydi
         </h1>
         <div className="flex flex-col sm:flex-col md:flex-row items-center justify-between gap-5 md:gap-9">
@@ -67,7 +68,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="container flex items-center justify-center min-h-screen py-10">
+      <section className="container flex items-center justify-center min-h-screen">
         <Catigorya />
       </section>
     </div>
