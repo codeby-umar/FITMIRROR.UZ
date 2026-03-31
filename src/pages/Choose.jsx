@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { IoCameraReverse, IoCamera, IoClose, IoCheckmark } from "react-icons/io5";
 import { SiStartrek } from "react-icons/si";
 import { FaBezierCurve } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 export default function Choose() {
@@ -205,14 +206,11 @@ export default function Choose() {
                 Qayta olish
               </button>
 
-              <button
-                onClick={() => {
-                  console.log("AI process image:", capturedImage);
-                }}
+              <Link to={'/clothesid'}
                 className="flex-1 py-4 rounded-sm bg-white text-black font-semibold transition"
               >
                 AI ga yuborish
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ function Footer() {
               <h2 className="text-2xl font-bold text-white mb-2">
                 FITMIRROR UZ
               </h2>
-              <p className="text-sm text-gray-500 max-w-[260px]">
+              <p className="text-sm text-gray-500 max-w-65">
                 O’z uslubingizni AI yordamida kuzating va zamonaviy kiyimlarni
                 oson toping.
               </p>
@@ -41,17 +41,17 @@ function Footer() {
             <div className="flex flex-col gap-4 items-center md:items-start">
               <a
                 className="flex items-center gap-2 hover:text-white transition"
-                href="tel:+998770142800"
+                href="tel:+998507121208"
               >
                 <IoCall size={20} />
-                +998 77 014 28 00
+                +998 50 712 12 08
               </a>
               <a
                 className="flex items-center gap-2 hover:text-white transition"
-                href="mailto:onlyahror@gmail.com"
+                href="mailto:codingbyumar@gmail.com"
               >
                 <SiMinutemailer size={20} />
-                onlyahror@gmail.com
+                codingbyumar@gmail.com
               </a>
             </div>
           </div>
@@ -60,7 +60,7 @@ function Footer() {
 
           <p className="text-center text-sm sm:text-base text-gray-500">
             © 2026 All rights reserved —{" "}
-            <span className="text-white font-medium">codebyumar</span>
+            <span>codeby-umar</span>
           </p>
         </div>
       </footer>
@@ -100,7 +100,7 @@ function Footer() {
             <div className="relative -mt-12">
               <Link
                 to="/chooseclothes"
-                className="bg-gradient-to-tr from-white to-gray-200 text-[#1C1E29] w-14 h-14 rounded-2xl flex items-center justify-center shadow-[0_8px_20px_rgba(255,255,255,0.2)] border-4 border-[#1C1E29] active:scale-90 transition-transform duration-200 rotate-45"
+                className="bg-gray-200 text-[#1C1E29] w-14 h-14 rounded-2xl flex items-center justify-center  border-4 border-[#1C1E29] active:scale-90 transition-transform duration-200 rotate-45"
               >
                 <div className="-rotate-45">
                   <MdCameraAlt size={28} />

@@ -15,7 +15,7 @@ function ClothesId() {
         </h2>
 
         <div className="flex flex-wrap sm:flex-row items-start sm:items-center gap-4">
-          <Link className="flex cursor-pointer rounded-3xl items-center gap-3 bg-white px-5 py-3">
+          <Link to={'/chooseclothes'} className="flex cursor-pointer rounded-3xl items-center gap-3 bg-white px-5 py-3">
             <IoCamera size={'25px'} /> Kamera yoqish
           </Link>
           <Link className="flex cursor-pointer rounded-3xl items-center gap-3 bg-white px-5 py-3">

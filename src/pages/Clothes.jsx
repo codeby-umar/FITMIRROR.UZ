@@ -75,29 +75,29 @@ function Clothes() {
 
   return (
     <section className="container px-7 md:px-0 font-[Jost] py-20">
-      <div className="mb-10 md:mb-16 flex flex-col gap-5  lg:flex-row lg:items-start lg:justify-between">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#252432]">
+      <div className="mb-10 md:mb-16 flex flex-wrap gap-5  lg:flex-row lg:items-start lg:justify-between">
+        <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#252432]">
           Kiyimlar
         </h2>
 
         <div className="flex flex-wrap sm:flex-row items-start sm:items-center gap-4">
           <Link
             to={"/"}
-            className="flex cursor-pointer rounded-3xl items-center gap-3 bg-white px-5 py-3"
+            className="flex cursor-pointer text-sm md:text-base rounded-3xl items-center gap-3 bg-white px-2.5 py-2.5 md:px-5 md:py-3"
           >
-            <GiClothes size={"25px"} /> Erkaklar kiyimlari
+            <GiClothes className="text-xl md:text-2xl" /> Erkaklar kiyimlari
           </Link>
           <Link
             to={"/"}
-            className="flex cursor-pointer rounded-3xl items-center gap-3 bg-white px-5 py-3"
+            className="flex cursor-pointer text-sm md:text-base rounded-3xl items-center gap-3 bg-white px-2.5 py-2.5 md:px-5 md:py-3"
           >
-            <PiTShirtFill size={"25px"} /> Ayollar kiyimlari
+            <PiTShirtFill className="text-xl md:text-2xl" /> Ayollar kiyimlari
           </Link>
           <Link
             to={"/"}
-            className="flex cursor-pointer rounded-3xl items-center gap-3 bg-white px-5 py-3"
+            className="flex cursor-pointer text-sm md:text-base rounded-3xl items-center gap-3 bg-white px-2.5 py-2.5 md:px-5 md:py-3"
           >
-            <GiShorts size={"25px"} /> Sport kiyimlari
+            <GiShorts className="text-xl md:text-2xl" /> Sport kiyimlari
           </Link>
         </div>
       </div>
@@ -105,10 +105,10 @@ function Clothes() {
       <div>
         <Link
           to={"/clothesid"}
-          className="flex flex-wrap items-center justify-center gap-10"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-10"
         >
           {Prodectes.map((item) => (
-            <div key={item.id} className="w-full sm:w-[47%] lg:w-70">
+            <div key={item.id} className="w-full">
               <div className="relative w-full flex items-center justify-center rounded-t-4xl bg-[#00000040] overflow-hidden">
                 <button
                   onClick={() => setLiked(!liked)}
@@ -125,25 +125,28 @@ function Clothes() {
                 <img
                   src={imgs}
                   alt="product"
-                  className="object-contain transition group-hover:scale-105 max-w-full h-auto"
+                  className="object-contain max-w-full h-auto"
                 />
               </div>
+
               <div className="py-3 reletive">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg sm:text-xl font-semibold font-[K2D]">
+                  <h3 className="text-sm sm:text-xl font-semibold font-[K2D]">
                     {item.name}
                   </h3>
-                  <span className="text-2xl sm:text-3xl font-bold font-[K2D]">
+                  <span className="text-lg sm:text-3xl font-bold font-[K2D]">
                     {item.narxi}
                   </span>
                 </div>
-                <div className="flex items-center gap-2 mb-3 text-base sm:text-lg text-gray-500">
+
+                <div className="flex items-center gap-2 mb-3 text-sm sm:text-lg text-gray-500">
                   <div className="text-yellow-400">★★★★★</div>
                   <span>(230)</span>
                 </div>
+
                 <Link
                   to={"/chooseclothes"}
-                  className="px-4 rounded-b-4xl flex items-center justify-center text-white w-full py-3 gap-2 text-base sm:text-lg font-bold bg-[#4E47FF]"
+                  className="px-4 rounded-b-4xl flex items-center justify-center text-white w-full py-2 sm:py-3 gap-2 text-sm sm:text-lg font-bold bg-[#4E47FF]"
                 >
                   <GiBurningEye size={"20px"} /> Kiyib ko'rish
                 </Link>

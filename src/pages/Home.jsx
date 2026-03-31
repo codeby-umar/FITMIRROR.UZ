@@ -42,7 +42,7 @@ function Home() {
           </p>
           <div>
             <Link
-              to={"/chooseclothes"}
+              to={"/login"}
               className="bg-indigo-600 p-4.5 px-10 sm:px-14 md:px-17 font-bold text-base text-white rounded-[10px] inline-block"
             >
               Boshlash
